@@ -1,6 +1,8 @@
 const gridCanvas = document.querySelector("#gridCanvas");
 const color = document.getElementById("myColor");
 const clear = document.getElementById("clear");
+const gridPixelSize = document.getElementById("gridPixelSize");
+const showPixel = document.getElementById("showPixel");
 
 let pixelCount = 8;
 
@@ -30,9 +32,18 @@ function createCanvas(pixelSize = pixelCount) {
 
 createCanvas(pixelCount);
 
+// clear canvas to draw new things.
+
 function clearCanvas() {
   gridCanvas.innerHTML = "";
   createCanvas(pixelCount);
 }
 
 clear.addEventListener("click", clearCanvas);
+
+gridPixelSize.addEventListener("mouseup", function () {
+  pixelCount = this.value;
+  gridCanvas.innerHTML = "";
+  showPixel.textContent = `${this.value} X ${this.value}`;
+  createCanvas(pixelCount);
+});
