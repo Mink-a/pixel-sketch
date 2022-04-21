@@ -1,5 +1,6 @@
 const gridCanvas = document.querySelector("#gridCanvas");
 const color = document.getElementById("myColor");
+const clear = document.getElementById("clear");
 
 let pixelCount = 8;
 
@@ -28,3 +29,10 @@ function createCanvas(pixelSize = pixelCount) {
 }
 
 createCanvas(pixelCount);
+
+function clearCanvas() {
+  gridCanvas.innerHTML = "";
+  createCanvas(pixelCount);
+}
+
+clear.addEventListener("click", clearCanvas);
