@@ -1,4 +1,5 @@
 const gridCanvas = document.querySelector("#gridCanvas");
+const color = document.getElementById("myColor");
 
 let pixelCount = 8;
 
@@ -7,6 +8,11 @@ function createCanvas(pixelSize = pixelCount) {
     for (col = 0; col < pixelSize; col++) {
       let pixel = document.createElement("div");
       pixel.classList.add("pixel");
+
+      pixel.addEventListener("mousemove", () =>
+        pixel.style.setProperty("background", color.value)
+      );
+
       gridCanvas.style.setProperty(
         "grid-template-columns",
         `repeat(${pixelSize}, 1fr)`
