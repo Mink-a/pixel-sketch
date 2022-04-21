@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <h1>Pixel Sketch</h1>
-    <button>Clear</button>
-    <p>8 X 8</p>
-    <input type="color" name="myColor" id="myColor" />
-    <div id="gridCanvas"></div>
-    <input type="range" />
+    <div class="viewport">
+      <h1>Pixel Sketch</h1>
+      <div class="header">
+        <button>Clear</button>
+        <p>8 X 8</p>
+        <input type="color" name="myColor" id="myColor" />
+      </div>
+      <div id="gridCanvas"></div>
+      <input type="range" min="2" max="64" value="4" />
+    </div>
   </body>
   <script src="./main.js"></script>
 </html>
