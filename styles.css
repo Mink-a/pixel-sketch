@@ -1,0 +1,10 @@
+#gridCanvas {
+  display: grid;
+  width: 500px;
+  height: 500px;
+  border: 1px solid limegreen;
+}
+
+.pixel {
+  border: 1px solid red;
+}
